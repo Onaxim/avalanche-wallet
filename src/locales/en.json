@@ -8,7 +8,7 @@
         "desc": "Av.ax Wallet is an independant fork of the Avalanche Wallet.",
         "access": {
             "title": "Welcome Back!",
-            "desc": "Access your existing Av.ax wallet here.",
+            "desc": "Access your existing Avalanche wallet here.",
             "submit": "Access Wallet"
         },
         "create": {

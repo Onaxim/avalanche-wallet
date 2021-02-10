@@ -8,6 +8,8 @@ import { Datetime } from 'vue-datetime'
 import 'vue-datetime/dist/vue-datetime.css'
 
 import { BootstrapVue } from 'bootstrap-vue'
+import './tailwind.css'
+
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 
