@@ -181,6 +181,14 @@ const network_module: Module<NetworkState, RootState> = {
                 'https://explorer.avax-test.network',
                 true
             )
+            let avax = new AvaNetwork(
+                'Av.ax',
+                'https://api.av.ax:443',
+                5,
+                'https://explorerapi.av.ax',
+                'https://explorer.av.ax',
+                true
+            )
 
             // Load custom networks if any
             try {
@@ -190,6 +198,7 @@ const network_module: Module<NetworkState, RootState> = {
             }
 
             // commit('addNetwork', netTest);
+            commit('addNetwork', avax)
             commit('addNetwork', manhattan)
             commit('addNetwork', fuji)
 
