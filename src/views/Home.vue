@@ -4,56 +4,72 @@
             <b-row>
                 <b-col>
                     <div class="home_wrapper">
-                        <h1>{{ $t('home.desc') }}</h1>
-                        <div class="login_wrapper">
-                            <div class="login_option">
-                                <header>
-                                    <div class="img_container">
-                                        <img
-                                            v-if="$root.theme === 'day'"
-                                            src="@/assets/diamond-primary.svg"
-                                            alt
-                                        />
-                                        <img v-else src="@/assets/diamond-primary-night.svg" alt />
-                                    </div>
-                                    <h2>{{ $t('home.access.title') }}</h2>
-                                    <p>{{ $t('home.access.desc') }}</p>
-                                </header>
+                        <h1 class="text-4xl text-center py-12">{{ $t('home.desc') }}</h1>
+                        <div class="max-w-6xl container mx-auto grid grid-cols-6 pt-12">
+                            <!-- Login to wallet -->
+                            <div
+                                class="grid justify-items-center col-span-6 md:col-span-6 lg:col-span-3"
+                            >
                                 <router-link
                                     data-cy="access"
                                     to="/access"
-                                    class="ava_button button_primary"
+                                    class="button_primary px-6"
                                 >
-                                    {{ $t('home.access.submit') }}
+                                    <div class="grid grid-cols-12 h-full max-w-md py-8">
+                                        <div class="py-4 col-span-2 my-auto">
+                                            <img
+                                                class="icons"
+                                                v-if="$root.theme === 'day'"
+                                                src="@/assets/WalletWhite.svg"
+                                                alt
+                                            />
+                                            <img v-else src="@/assets/WalletBlack.svg" alt />
+                                        </div>
+                                        <div class="col-span-10 my-auto text-left px-6">
+                                            <h2 class="font-bold text-md text-xl">Access Wallet</h2>
+                                            <p class="pt-3 text-lg">
+                                                Access your existing Avalanche wallet and select a
+                                                network.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </router-link>
                             </div>
-                            <div class="login_option">
-                                <header>
-                                    <div class="img_container">
-                                        <img
-                                            v-if="$root.theme === 'day'"
-                                            src="@/assets/diamond-secondary.png"
-                                            alt
-                                        />
-                                        <img
-                                            v-else
-                                            src="@/assets/diamond-secondary-night.svg"
-                                            alt
-                                        />
-                                    </div>
-                                    <h2>{{ $t('home.create.title') }}</h2>
-                                    <p>{{ $t('home.create.desc') }}</p>
-                                </header>
+                            <!-- Create Wallet -->
+                            <div
+                                class="grid justify-items-center col-span-6 md:col-span-6 lg:col-span-3"
+                            >
                                 <router-link
                                     data-cy="create"
                                     to="/create"
-                                    class="ava_button button_secondary"
+                                    class="button_secondary px-6"
                                 >
-                                    {{ $t('home.create.submit') }}
+                                    <div class="grid grid-cols-12 h-full max-w-md py-8">
+                                        <div class="py-4 col-span-2 my-auto">
+                                            <img
+                                                class="icons"
+                                                v-if="$root.theme === 'day'"
+                                                src="@/assets/NewWalletWhite.svg"
+                                                alt
+                                            />
+                                            <img v-else src="@/assets/NewWalletWhite.svg" alt />
+                                        </div>
+                                        <div class="col-span-10 my-auto text-left px-6">
+                                            <h2 class="font-bold text-md text-xl">
+                                                Create New Wallet
+                                            </h2>
+                                            <p class="pt-3 text-lg">
+                                                Create a new Avalanche wallet to send, receive and
+                                                swap assets.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </router-link>
                             </div>
                         </div>
+                        <img class="vector mt-16" src="@/assets/to-the-moon.svg" alt />
                     </div>
+                    <div class="max-w-6xl"></div>
                 </b-col>
             </b-row>
         </b-container>
@@ -72,6 +88,10 @@ export default class Home extends Vue {}
 
 <style scoped lang="scss">
 @use "../main";
+
+.vector {
+    max-height: 250px;
+}
 
 .home {
     padding-top: 100px;
@@ -93,12 +113,6 @@ export default class Home extends Vue {}
         align-content: center;
         justify-content: center;
 
-        h1 {
-            text-align: center;
-            font-size: 22px;
-            font-weight: 400;
-        }
-
         .login_wrapper {
             margin-top: 60px;
             display: grid;
@@ -116,12 +130,6 @@ export default class Home extends Vue {}
 
                 header {
                     margin-bottom: 60px;
-
-                    img {
-                        width: 89px;
-                        height: 89px;
-                        max-height: none;
-                    }
 
                     h2 {
                         padding-top: main.$s-size;
@@ -155,7 +163,7 @@ export default class Home extends Vue {}
     margin-bottom: 30px;
 }
 
-img {
+img.icons {
     max-height: 50px;
     object-fit: contain;
 }
@@ -213,11 +221,6 @@ img {
                         img {
                             width: 40px;
                             height: 40px;
-                        }
-
-                        h2 {
-                            padding-top: main.$s-size-mobile;
-                            font-size: main.$s-size-mobile;
                         }
 
                         p {

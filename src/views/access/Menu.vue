@@ -1,8 +1,8 @@
 <template>
     <div class="access_card">
         <div class="img_container">
-            <img v-if="$root.theme === 'day'" src="@/assets/diamond-primary.svg" alt />
-            <img v-else src="@/assets/diamond-primary-night.svg" alt />
+            <img v-if="$root.theme === 'day'" src="@/assets/avalanche.svg" alt />
+            <img v-else src="@/assets/avalanche-clip.svg" alt />
         </div>
         <h1>{{ $t('access.title') }}</h1>
         <router-link to="/create" class="link">{{ $t('access.create') }}</router-link>
