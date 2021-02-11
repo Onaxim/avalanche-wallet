@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-8xl container mt-24">
+    <div>
         <transition name="fade" mode="out-in">
             <router-view class="access_card"></router-view>
         </transition>

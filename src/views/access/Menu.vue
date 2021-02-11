@@ -1,10 +1,10 @@
 <template>
-    <div class="access_card">
+    <div class="max-w-6xl container mt-24 access_card">
         <div class="img_container">
             <img v-if="$root.theme === 'day'" src="@/assets/avalanche.svg" alt />
             <img v-else src="@/assets/avalanche-clip.svg" alt />
         </div>
-        <h1>{{ $t('access.title') }}</h1>
+        <h1 class="text-xl">{{ $t('access.title') }}</h1>
         <router-link to="/create" class="link">{{ $t('access.create') }}</router-link>
         <hr />
         <div class="options">

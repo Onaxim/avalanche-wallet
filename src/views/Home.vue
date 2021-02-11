@@ -5,7 +5,7 @@
                 <b-col>
                     <div class="home_wrapper">
                         <h1 class="text-4xl text-center py-12">{{ $t('home.desc') }}</h1>
-                        <div class="max-w-6xl container mx-auto grid grid-cols-6 pt-12">
+                        <div class="max-w-6xl container mx-auto grid grid-cols-6 pt-12 mb-12">
                             <!-- Login to wallet -->
                             <div
                                 class="grid justify-items-center col-span-6 md:col-span-6 lg:col-span-3"
@@ -23,7 +23,12 @@
                                                 src="@/assets/WalletWhite.svg"
                                                 alt
                                             />
-                                            <img v-else src="@/assets/WalletBlack.svg" alt />
+                                            <img
+                                                v-else
+                                                class="icons"
+                                                src="@/assets/WalletBlack.svg"
+                                                alt
+                                            />
                                         </div>
                                         <div class="col-span-10 my-auto text-left px-6">
                                             <h2 class="font-bold text-md text-xl">Access Wallet</h2>
@@ -52,7 +57,12 @@
                                                 src="@/assets/NewWalletWhite.svg"
                                                 alt
                                             />
-                                            <img v-else src="@/assets/NewWalletWhite.svg" alt />
+                                            <img
+                                                v-else
+                                                class="icons"
+                                                src="@/assets/NewWalletWhite.svg"
+                                                alt
+                                            />
                                         </div>
                                         <div class="col-span-10 my-auto text-left px-6">
                                             <h2 class="font-bold text-md text-xl">
@@ -67,7 +77,7 @@
                                 </router-link>
                             </div>
                         </div>
-                        <img class="vector mt-16" src="@/assets/to-the-moon.svg" alt />
+                        <img class="vector mt-16" src="@/assets/tree-alt.svg" alt />
                     </div>
                     <div class="max-w-6xl"></div>
                 </b-col>
