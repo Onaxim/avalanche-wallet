@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-6xl container mt-24 access_card">
+    <div class="max-w-6xl container mx-auto mt-24 access_card">
         <div class="img_container">
             <img v-if="$root.theme === 'day'" src="@/assets/avalanche.svg" alt />
             <img v-else src="@/assets/avalanche-clip.svg" alt />
@@ -88,9 +88,6 @@ hr {
     &:hover {
         //transform: translateY(-5px);
         box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
     }
 }
 
