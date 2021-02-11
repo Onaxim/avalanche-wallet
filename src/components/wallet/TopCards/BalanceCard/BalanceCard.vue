@@ -159,6 +159,8 @@ export default class BalanceCard extends Vue {
     }
 
     get totalBalanceBig(): Big {
+        console.log(this.totalBalance)
+        console.log(this.ava_asset)
         if (this.ava_asset) {
             let denom = this.ava_asset.denomination
             let bigTot = bnToBig(this.totalBalance, denom)
